@@ -1,0 +1,15 @@
+server:
+  port: 8889
+spring:
+  application:
+    name: user-center
+  datasource:
+    url: jdbc:mysql://localhost:3306/example?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8888/eureka/
