@@ -1,0 +1,21 @@
+server:
+  port: 8891
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8888/eureka/
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/SirSpring/spring-cloud-config.git
+          search-paths: my-config
+      label: master

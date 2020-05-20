@@ -15,9 +15,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="config" target="1.8" />
       <module name="model (1) (com.example)" target="1.5" />
       <module name="OAuth" target="1.5" />
+      <module name="parent" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
