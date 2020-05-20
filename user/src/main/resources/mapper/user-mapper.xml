@@ -15,14 +15,14 @@
     <!-- 根据用户名查询用户 -->
     <select id="findByUsername" parameterType="java.lang.String" resultMap="UserResultMap">
         <![CDATA[
-        select * from springcloud_user where username = #{username}
+        select * from w_user where username = #{username}
         ]]>
     </select>
 
     <!-- 根据user id查询用户拥有的role -->
     <select id="selectRolesByUserId" parameterType="java.lang.Integer" resultType="com.example.user.model.Role">
         <![CDATA[
-        select r.id, r.name from springcloud_user_role ur, springcloud_role r
+        select r.id, r.name from w_role_user ur, w_role r
         where ur.role_id = r.id and ur.user_id = #{id}
         ]]>
     </select>

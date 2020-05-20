@@ -4,6 +4,7 @@ import com.example.user.model.User;
 import feign.Param;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @ClassName UserFegin
@@ -13,6 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 @FeignClient(value = "USER-CENTER")
 public interface UserFegin {
 
-    @PostMapping("/user/getUser")
-    User getUser(String username);
+    @PostMapping(path = "/user/getUser", params = "username")
+    User getUser(@RequestParam("username") String username);
 }

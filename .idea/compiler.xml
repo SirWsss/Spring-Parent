@@ -9,8 +9,8 @@
         <module name="OAuth" />
         <module name="user" />
         <module name="oauth" />
-        <module name="model" />
         <module name="eureka" />
+        <module name="model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
