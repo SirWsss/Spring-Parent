@@ -6,20 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="OAuth" />
         <module name="user" />
-        <module name="oauth" />
-        <module name="eureka" />
+        <module name="OAuth" />
         <module name="model" />
+        <module name="eureka" />
+        <module name="oauth" />
+        <module name="config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config" target="1.8" />
       <module name="model (1) (com.example)" target="1.5" />
       <module name="OAuth" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="oauth" options="-parameters" />
       <module name="user" options="-parameters" />
