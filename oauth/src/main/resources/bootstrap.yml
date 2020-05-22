@@ -16,3 +16,15 @@ spring:
     url: jdbc:mysql://localhost:3306/example?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
     username: root
     password: 123456
+  cloud:
+    config:
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-center
+      label: master
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

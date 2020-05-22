@@ -48,6 +48,16 @@
             <artifactId>spring-cloud-starter-oauth2</artifactId>
             <version>2.2.1.RELEASE</version>
         </dependency>
+        <!--Spring Cloud Config 分布式配置-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+        <!--依赖此jar包刷新配置文件(Linux:curl -X POST http://localhost:端口号/actuator/refresh)Ps.类上声明注解@RefreshScope-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
         <!--SpringBoot-->
         <!-- JDBC -->
