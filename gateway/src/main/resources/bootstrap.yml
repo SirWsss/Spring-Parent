@@ -1,5 +1,4 @@
 server:
-
   port: 6080
 eureka:
   instance:
@@ -13,6 +12,13 @@ eureka:
 spring:
   application:
     name: gateway-center
+  cloud:
+    gateway:
+      routes:
+        - id: baidu_route
+          uri: http://www.baidu.com
+          predicates:
+            - Path=/baidu
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
