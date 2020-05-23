@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user" />
+        <module name="gateway" />
         <module name="OAuth" />
         <module name="model" />
         <module name="eureka" />
@@ -25,6 +26,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="config" options="-parameters" />
       <module name="eureka" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="oauth" options="-parameters" />
       <module name="user" options="-parameters" />
     </option>
