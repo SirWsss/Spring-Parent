@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class TestController {
 
-    @Value("${name}")
+    @Value("${spring.datasource.username}")
     private String name;
 
     Logger log = LoggerFactory.getLogger(TestController.class);

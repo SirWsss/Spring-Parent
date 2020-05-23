@@ -12,9 +12,15 @@ eureka:
 spring:
   application:
     name: config-center
+  #从项目的 resources路径下读取配置文件。如果是读取指定的配置文件，
+  #那么可以使用 spring.cloud.config.server.native.searchLocations = file:D:/properties/ 来读取
+  profiles:
+    active: native
   cloud:
     config:
       server:
+        native:
+          search-locations: file:/data/configs/{profile}
         git:
           uri: https://gitee.com/SirSpring/spring-cloud-config.git
           search-paths: my-config
